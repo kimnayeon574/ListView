@@ -40,6 +40,35 @@ namespace ListView
                 this.txtWork.Focus();
                 return false;
             }
+            return true;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (TextCheck())
+            {
+                this.strName = this.txtName.Text;
+                this.strAge = this.txtAge.Text;
+                this.strWork = this.txtWork.Text;
+
+                ListViewItem lvi = new ListViewItem(
+                        new string[] {this.strName, this.strAge, this.strWork});
+                this.lvView.Items.Add(lvi);
+                this.txtName.Text = "";
+                this.txtAge.Text = "";
+                this.txtWork.Text = "";
+                this.txtName.Focus();
+            }
+        }
+
+        private void lvView_Click(object sender, EventArgs e)
+        {
+            ListViewItem lvi = lvView.SelectedItems[0];
+            string name = lvi.SubItems[0].Text;
+            string age = lvi.SubItems[1].Text;
+            string work = lvi.SubItems[2].Text;
+            MessageBox.Show("이름 : " + name + "\n나이: " + age + "\n직업 : " + work, "정보", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
