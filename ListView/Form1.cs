@@ -63,7 +63,7 @@ namespace ListView
 
         private void lvView_Click(object sender, EventArgs e)
         {
-            ListViewItem lvi = lvView.SelectedItems[0];
+            ListViewItem lvi = lvView.SelectedItems[0]; 
             string name = lvi.SubItems[0].Text;
             string age = lvi.SubItems[1].Text;
             string work = lvi.SubItems[2].Text;
