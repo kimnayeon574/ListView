@@ -28,13 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lvView = new System.Windows.Forms.ListView();
+            this.lbName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtWork = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblWork = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SuspendLayout();
+            // 
+            // lvView
+            // 
+            this.lvView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chName,
+            this.chAge,
+            this.chWork});
+            this.lvView.FullRowSelect = true;
+            this.lvView.GridLines = true;
+            this.lvView.Location = new System.Drawing.Point(12, 12);
+            this.lvView.Name = "lvView";
+            this.lvView.Size = new System.Drawing.Size(367, 278);
+            this.lvView.TabIndex = 0;
+            this.lvView.UseCompatibleStateImageBehavior = false;
+            this.lvView.View = System.Windows.Forms.View.Details;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(12, 299);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(37, 12);
+            this.lbName.TabIndex = 1;
+            this.lbName.Text = "이름 :";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(56, 296);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(188, 21);
+            this.txtName.TabIndex = 2;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Location = new System.Drawing.Point(56, 323);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(188, 21);
+            this.txtAge.TabIndex = 3;
+            // 
+            // txtWork
+            // 
+            this.txtWork.Location = new System.Drawing.Point(56, 350);
+            this.txtWork.Name = "txtWork";
+            this.txtWork.Size = new System.Drawing.Size(188, 21);
+            this.txtWork.TabIndex = 4;
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(12, 326);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(41, 12);
+            this.lblAge.TabIndex = 5;
+            this.lblAge.Text = "나이 : ";
+            // 
+            // lblWork
+            // 
+            this.lblWork.AutoSize = true;
+            this.lblWork.Location = new System.Drawing.Point(12, 353);
+            this.lblWork.Name = "lblWork";
+            this.lblWork.Size = new System.Drawing.Size(41, 12);
+            this.lblWork.TabIndex = 6;
+            this.lblWork.Text = "직업 : ";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(250, 295);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(129, 76);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "추가";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // chName
+            // 
+            this.chName.Text = "이름";
+            this.chName.Width = 100;
+            // 
+            // chAge
+            // 
+            this.chAge.Text = "나이";
+            this.chAge.Width = 100;
+            // 
+            // chWork
+            // 
+            this.chWork.Text = "직업";
+            this.chWork.Width = 150;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(391, 384);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lblWork);
+            this.Controls.Add(this.lblAge);
+            this.Controls.Add(this.txtWork);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lbName);
+            this.Controls.Add(this.lvView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.Text = "입력 목록 보기";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView lvView;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtWork;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblWork;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ColumnHeader chName;
+        private System.Windows.Forms.ColumnHeader chAge;
+        private System.Windows.Forms.ColumnHeader chWork;
     }
 }
 
